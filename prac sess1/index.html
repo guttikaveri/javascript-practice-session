@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript session 1</title>
+</head>
+<body>
+    <!-- variables -->
+      <!-- variables are containers that will store datatypes and manipulate the data. -->
+       <!-- there are three types of variables -->
+        <!-- 1. var  2.let and constant -->
+     
+   <script>
+    //  var:
+     //var is a  global  and  functional scope andit can be redeclared and reinitialized.
+    //  syntax: variable initialization= declaration
+    var a = 10;  //declared and initialized
+    var a = 20 // redeclared
+    var b = 10 // reinitialized
+ console.log(a) 
+//  ------------------------------------------------------------------------------------------------------------- 
+    // letL
+//let is a block  scopevariable and it  can be  reinitialized but not redeclared.
+    let  variable  = 100;
+    // let variable = 100; //here you cannot  redeclare  again
+    let variable1 = 100; //  output = 100
+  console.log(variable);
+//   ---------------------------------------------------------------------------------------------------------
+   //const : const is a block scope variable and it  cannot be redeclared and reinitialized.
+   const  number = 200;
+   //const  number = 200; here you cannot   reclared or reinitialized
+   console.log(number);
+   
+    // --------------------------------------------------------------------------------------
+
+    //  DataTypes: 
+    //JavaScript has 7 primitive data types (String, Number, Boolean, Undefined, Null, Symbol, BigInt) 
+    // and two non-primitive type: Object, Array.
+
+    // primitive data types:
+    // 1. string:  
+        var name ="kaveri";
+        console.log(name);
+        
+    // 2. number:
+        var age = 20;
+        console.log(age);
+    // 3. boolean:
+        var isValid = true;
+        console.log(isMarried); 
+    // 4. undefined:
+        var address;
+        console.log(address);
+    // 5. null:
+        var car = null;
+        console.log(car);
+    // 6. symbol:
+        var id = Symbol("id");
+        console.log(id);
+    // 7. bigint:
+        var big = 9007199254740991n;
+        console.log(big);
+
+        // -------------------------------------------------------------------------------
+                //    operators
+
+                // 1. arithmatic operators
+
+                // 2. assignment operators
+                // 3. comparison operators
+                // 4. logical operators
+                // 5. unary operators
+                // 6. ternary operators       
+        //1. arithmatic operators :
+        var a = 10;
+        var b = 20;
+        var c = a + b;
+        console.log(c);
+            
+
+        // 2. assignment operators:
+        var x = 10;
+        x += 5;
+        console.log(x);
+        x -= 5;
+        console.log(x);
+        x *= 5;
+        console.log(x);
+        x /= 5;
+        console.log(x);
+        x %= 5;
+        console.log(x);
+        x **= 5;
+        console.log(x);
+
+        // 3. comparison operators: 
+        var a = 10;
+        var b = 20;
+        var c = a == b;
+        console.log(c);
+        var d = a != b;
+        console.log(d);
+        var e = a > b;
+        console.log(e);
+        var f = a < b;
+        console.log(f);
+        var g = a >= b;
+        console.log(g);
+        var h = a <= b;
+        console.log(h);
+
+        // 4. logical operators:
+        var a = true;
+        var b = false;
+        var c = a && b;
+        console.log(c);
+        var d = a || b;
+        console.log(d);
+        var e = !a;
+        console.log(e);
+
+        // 5. unary operators: 
+        var a = 10;
+        var b = -a;
+        console.log(b);
+        var c = +a;
+        console.log(c);
+        var d = ++a;
+        console.log(d);
+        var e = --a;
+        console.log(e);
+
+        // 6. ternary operators:
+        var a = 10;
+        var b = 20;
+        var c = a > b ? "a is greater" : "b is greater";
+        console.log(c); 
+
+
+        
+
+
+
+
+
+
+
+
+
+
+   </script>
+    
+</body>
+</html>

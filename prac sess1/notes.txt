@@ -1,0 +1,97 @@
+1. Variables
+Q1: What are variables in JavaScript? How do you declare them?
+Answer:
+Variables are containers for storing data values. They can be declared using `var`, `let`, or `const`.  
+
+var x = 10;  // Function-scoped
+let y = 20;  // Block-scoped
+const z = 30; // Block-scoped and immutable
+
+---------------------------------------------------------------------------------------------------
+Q2: What is variable hoisting?
+Answer:
+In JavaScript, variable declarations are moved to the top of their scope during compilation.  
+console.log(x); // undefined
+var x = 10;
+------------------------------------------------------------------------------------------------------------
+
+Q4: What happens if you declare a variable without `var`, `let`, or `const`?**
+Answer:
+It becomes a global variable (not recommended) and can cause unintended side effects.
+
+myVar = 10;  // Implicit global variable
+-------------------------------------------------------------------------------------------------------------
+
+2. Data Types:
+Q5: What are the different data types in JavaScript?**
+Answer:
+JavaScript has 7 primitive typesand 1 non-primitive type:
+1. Primitive Types:
+   Number: let x = 42;
+   String: let name = "Alice";
+   Boolean: let isActive = true;
+   Undefined: let z;
+   Null: let empty = null;
+   Symbol: let id = Symbol("id");
+    BigInt: let big = 123456789012345678901n;
+2. Non-Primitive Type:
+   Object: {}, Arrays, Functions, etc.
+
+----------------------------------------------------------------------------------------------------------------
+Q8: How can you check the data type of a variable?
+Answer:
+Using the typeof operator:
+
+let num = 42;
+console.log(typeof num); // "number"
+
+
+--------------------------------------------------------------------------------------------------------------
+3. Operators:
+Q9: What are the different types of operators in JavaScript?
+Answer:
+1. Arithmetic Operators:+, -, *, /, %, ++, --
+2. Comparison Operators:==, ===, !=, !==, <, >, <=, >=
+3. Logical Operators:&&, ||, !
+4. Assignment Operators: =,+=, -=, *=, /=
+5. Ternary Operator: `condition ? value1 : value2`
+
+----------------------------------------------------------------------------------------------------------
+Q10: What is the difference between ++x and x++?
+Answer:
+++x (Pre-increment): Increments `x` first, then returns the value.
+x++ (Post-increment): Returns `x` first, then increments it.
+
+Example:
+
+let x = 5;
+console.log(++x); // 6
+console.log(x++); // 6 (then x becomes 7)
+--------------------------------------------------------------------------------------------------------------
+
+Q11: What is the ternary operator?
+Answer:
+A shorthand for `if-else` statements:
+
+let age = 18;
+let status = age >= 18 ? "Adult" : "Minor";
+console.log(status); // "Adult"
+
+
+----------------------------------------------------------------------------------------------------------
+
+#### **Q12: How does the `typeof` operator behave for `null`?**
+**Answer:**
+`typeof null` returns `"object"` due to a historical bug in JavaScript.
+
+--------------------------------------------------------------------------------------------------------------
+
+#### **Q13: What are template literals?**
+Answer:
+Template literals are string literals enclosed by backticks (``). They support interpolation:
+let name = "Alice";
+console.log(`Hello, ${name}!`); // "Hello, Alice!"
+
+
+--------------------------------------------------------------------------------------------------------------
+
