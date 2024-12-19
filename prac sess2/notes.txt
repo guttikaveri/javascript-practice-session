@@ -1,0 +1,159 @@
+Array Questions
+1.How do you find the length of an array?
+
+const arr = [1, 2, 3, 4];
+console.log(arr.length); // Output: 4
+--------------------------------------------------------------------
+
+2. How do you add and remove elements from an array?
+Add: Use push (end) or unshift (start).
+Remove: Use `pop` (end) or shift (start).
+
+const arr = [1, 2, 3];
+arr.push(4); // [1, 2, 3, 4]
+arr.pop();   // [1, 2, 3]
+arr.unshift(0); // [0, 1, 2, 3]
+arr.shift(); // [1, 2, 3]
+----------------------------------------------------------------------
+
+3.How do you find the largest number in an array?
+
+const arr = [10, 5, 20, 8];
+const max = Math.max(...arr);
+console.log(max); // Output: 20
+
+
+ 4.How do you remove duplicates from an array?
+const arr = [1, 2, 2, 3, 4, 4];
+const uniqueArr = [...new Set(arr)];
+console.log(uniqueArr); // Output: [1, 2, 3, 4]
+---------------------------------------------------------------------
+
+#### 5. **What is the difference between `map` and `forEach`?**
+map: Returns a new array.
+forEach: Does not return anything; used for side effects.
+
+---------------------------------------------------------------------
+
+String Questions:
+ 6.How do you reverse a string?
+const str = "hello";
+const reversed = str.split('').reverse().join('');
+console.log(reversed); // Output: "olleh"
+-------------------------------------------------------------------
+
+ 7. How do you check if a string contains another string?
+
+const str = "hello world";
+console.log(str.includes("world")); // Output: true
+--------------------------------------------------------------------
+
+ 8.How do you count the number of occurrences of a character in a string?**
+const str = "hello world";
+const count = str.split('').filter(char => char === 'o').length;
+console.log(count); // Output: 2
+------------------------------------------------------------------
+
+ 9.How do you convert a string to uppercase?
+
+const str = "hello";
+console.log(str.toUpperCase()); // Output: "HELLO"
+
+
+10.How do you split a string into an array?
+
+const str = "a,b,c";
+const arr = str.split(',');
+console.log(arr); // Output: ["a", "b", "c"]
+
+
+---------------------------------------------------------------------
+Object Questions:
+11.How do you clone an object?
+
+const obj = { a: 1, b: 2 };
+const clone = { ...obj };
+console.log(clone); // Output: { a: 1, b: 2 }
+--------------------------------------------------------------------
+
+ 12.How do you merge two objects?
+
+const obj1 = { a: 1 };
+const obj2 = { b: 2 };
+const merged = { ...obj1, ...obj2 };
+console.log(merged); // Output: { a: 1, b: 2 }
+----------------------------------------------------------------------
+13.How do you check if a property exists in an object?
+const obj = { a: 1 };
+console.log('a' in obj); // Output: true
+----------------------------------------------------------------------
+
+14.What is the difference between Object.keys() and Object.values()?
+Object.keys(): Returns an array of property names.
+Object.values(): Returns an array of property values.
+----------------------------------------------------------------------
+ 15.What is `this` in an object method?
+this refers to the object that owns the method.
+
+-------------------------------------------------------------------------
+ Function Questions:
+ 16.What is a higher-order function?
+ A function that takes another function as an argument or returns a function.
+
+const higherOrder = fn => fn(5);
+console.log(higherOrder(num => num * 2)); // Output: 10
+----------------------------------------------------------------------------------
+17.What is a closure?
+ A closure is a function that retains access to its outer scope.
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  };
+}
+const counter = outer();
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2
+---------------------------------------------------------------------------------------
+ 18.What is the difference between call, apply, and bind?
+call: Invokes a function with arguments as a comma-separated list.
+apply: Invokes a function with arguments as an array.
+bind: Returns a new function with a specified context.
+
+function greet(greeting) {
+  console.log(`${greeting}, ${this.name}`);
+}
+const obj = { name: "Alice" };
+greet.call(obj, "Hello");
+greet.apply(obj, ["Hi"]);
+const boundGreet = greet.bind(obj, "Hey");
+boundGreet();
+-------------------------------------------------------------------------------------------------
+ 19.What is the difference between function and arrow function?
+ Arrow functions do not have their own this.
+const obj = {
+  name: "Alice",
+  arrow: () => console.log(this.name), // Undefined
+  regular() {
+    console.log(this.name); // "Alice"
+  }
+};
+obj.arrow();
+obj.regular();
+------------------------------------------------------------------------------------------------------------
+20.What is a pure function?
+A function with no side effects and predictable output.
+function add(a, b) {
+  return a + b;
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------
+Event Questions:
+
+23.What is the difference between addEventListener and onclick?
+addEventListener: Allows multiple event handlers.
+onclick: Only one handler can be assigned.
+
+

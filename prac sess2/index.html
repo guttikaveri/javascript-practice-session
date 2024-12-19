@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding interview questions</title>
+</head>
+<body>
+   <script>
+// 1.Given an array of 0's and 1's find out number of 0's?
+
+// const numbers =[ 0,1,0,1,1,0,0,0,1];
+
+// let count = 0;
+
+// for(let i=0;i<numbers.length;i++){
+//     if(numbers[i]==0){
+//         count++;
+//     }
+// }
+// console.log(count);
+
+// Example array
+const numbers = [0, 1, 0, 1, 1, 0, 0, 1, 0];
+
+// Count the number of 0's
+const countZeros = numbers.filter(num => num === 0).length;
+
+console.log(`Number of 0's: ${countZeros}`);
+
+
+// -------------------------------------------------------------------------------------------------------
+// 2.Given an array find out total no. of odd and even nos.
+
+const oddevennumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let evenCount = 0;
+let oddCount = 0;
+
+for(let i=0;i<oddevennumbers.length;i++){
+    if(numbers[i]%2==0){
+        evenCount++;
+    }else{
+        oddCount++;
+    }
+}
+console.log(`Even count: ${evenCount}`);
+console.log(`Odd count: ${oddCount}`);
+
+
+
+// Example array
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Count the odd numbers
+// const oddCount = array.filter(num => num % 2 !== 0).length;
+
+// Count the even numbers
+// const evenCount = array.filter(num => num % 2 === 0).length;
+
+// console.log(`Number of odd numbers: ${oddCount}`);
+// console.log(`Number of even numbers: ${evenCount}`);
+
+
+
+// -------------------------------------------------------------------------------------------------------
+//3.Given a string find out number of vowels ?
+
+const string = "Hello, World!";
+
+let vowelCount = 0;
+
+for(let i=0;i<string.length;i++){
+    if(string[i]=='a' || string[i]=='e' || string[i]=='i' || string[i]=='o' || string[i]=='u'){
+        vowelCount++;
+    }
+}
+console.log(`Number of vowels: ${vowelCount}`);
+
+
+   </script>
+
+   
+</body>
+</html>
