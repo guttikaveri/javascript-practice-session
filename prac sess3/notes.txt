@@ -1,0 +1,111 @@
+
+JavaScript DOM (Document Object Model) manipulation allows developers to interact with and modify the structure, style, and content of a web page dynamically. This functionality is a cornerstone of modern web development, enabling the creation of interactive and dynamic user experiences.
+
+1. Selectors
+Selectors are used to identify and target specific elements in the DOM for manipulation.
+
+Types of Selectors
+
+1. getElementById()
+   Selects an element based on its `id` attribute.
+   Returns a single element.
+   Example:
+     const element = document.getElementById("myId");
+   -----------------------------------------------------------------------------------------------------------------
+
+2.getElementsByClassName()
+   Selects elements based on their class name.
+   Returns an HTMLCollection (array-like object).
+   Example:
+     const elements = document.getElementsByClassName("myClass");
+    -------------------------------------------------------------------------------------------------------------------
+
+3.getElementsByTagName()
+   Selects elements by their tag name.
+   Returns an HTMLCollection.
+   
+     const elements = document.getElementsByTagName("div");
+     --------------------------------------------------------------------------------------------------------------
+
+4.querySelector()
+    Selects the first element matching a CSS selector.
+   Example:
+    
+     const element = document.querySelector(".myClass");
+     -----------------------------------------------------------------------------------------------------
+
+5. querySelectorAll()
+   Selects all elements matching a CSS selector.
+   Returns a NodeList (array-like object).
+   Example:
+     const elements = document.querySelectorAll("div.myClass");
+     
+----------------------------------------------------------------------------------------------------------
+Manipulating Selected Elements:
+Changing Content:
+  
+  element.textContent = "New content here!";
+  
+Changing Attributes:
+
+  element.setAttribute("class", "newClass");
+ 
+Changing Styles:
+
+  element.style.color = "red";
+  
+
+---------------------------------------------------------------------------------------------------------------------
+2. Events:
+Events represent actions or occurrences that happen in the browser, such as clicks, key presses, or page loads. JavaScript allows you to respond to these events by attaching event handlers to elements.
+
+Adding Event Handlers
+
+1.Using addEventListener()
+   Adds an event listener to an element for a specific event.
+   Syntax:
+     
+     element.addEventListener("event", callbackFunction);
+    
+    Example:
+     
+     button.addEventListener("click", () => {
+         alert("Button clicked!");
+     });
+   
+
+2. Using Inline Event Handlers
+   Specifies the event directly in the HTML element's attribute.
+   Example:
+    
+     <button onclick="alert('Button clicked!')">Click Me</button>
+    
+
+3. Using Event Properties
+   Assigns an event handler to a property of the element (e.g., `onclick`).
+   Example:
+     button.onclick = function() {
+         alert("Button clicked!");
+     };
+    
+-----------------------------------------------------------------------------------------------------------------------
+Common Event Types:
+
+1.Mouse Events:
+   click, dblclick, mousedown, mouseup, mouseover, mouseout, mousemove.
+
+2.Keyboard Events:
+   keydown, keyup, keypress.
+
+3.Form Events:
+   submit, change, input, focus, blur.
+
+4. Window Events:
+   load, resize, scroll, unload.
+   ----------------------------------------------------------------------------------------------------------------
+Example: Event Handling:
+
+const button = document.getElementById("myButton");
+button.addEventListener("click", () => {
+    console.log("Button was clicked!");
+});
